@@ -1,0 +1,168 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.19, pytest-7.4.3, pluggy-1.5.0 -- /Users/rutujasurve/Documents/root_btlr/new-btlr-fastapi/btlr-fastapi/.venv/bin/python3.9
+cachedir: .pytest_cache
+rootdir: /Users/rutujasurve/Documents/root_btlr/new-btlr-fastapi/btlr-fastapi
+plugins: cov-4.1.0, anyio-3.7.1
+collecting ... collected 97 items
+
+tests/test_graph.py::PreferenceGraphTestCase::test_add_preference PASSED
+tests/test_graph.py::PreferenceGraphTestCase::test_add_preference_path_error PASSED
+tests/test_graph.py::PreferenceGraphTestCase::test_add_preference_tree_for_user_exception SKIPPED
+tests/test_graph.py::PreferenceGraphTestCase::test_add_preference_tree_for_user_expansion FAILED
+tests/test_graph.py::PreferenceGraphTestCase::test_add_preference_tree_for_user_identity PASSED
+tests/test_graph.py::PreferenceGraphTestCase::test_bootstrap PASSED
+tests/test_graph.py::PreferenceGraphTestCase::test_embedding PASSED
+tests/test_graph.py::PreferenceGraphTestCase::test_get_preference_tree_for_user PASSED
+tests/test_graph.py::PreferenceGraphTestCase::test_setup_user PASSED
+tests/test_graph.py::PreferenceGraphTestCase::test_unlink_preference PASSED
+tests/controller_tests/test_auth.py::test_create_user_success PASSED
+tests/controller_tests/test_auth.py::test_request_otp PASSED
+tests/controller_tests/test_auth.py::test_request_otp_invalid_email PASSED
+tests/controller_tests/test_auth.py::test_login_user_success FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_auth.py::test_login_user_user_not_found PASSED
+tests/controller_tests/test_auth.py::test_login_user_invalid_credentials PASSED
+tests/controller_tests/test_auth.py::test_refresh_token FIXME: DO SOME SCOPE STUFF
+FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_businesses.py::test_create_business FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_businesses.py::test_fail_on_create_duplicate PASSED
+tests/controller_tests/test_businesses.py::test_get_business PASSED
+tests/controller_tests/test_businesses.py::test_get_unknown_business PASSED
+tests/controller_tests/test_businesses.py::test_update_business PASSED
+tests/controller_tests/test_departments.py::test_create_department FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_departments.py::test_update_department PASSED
+tests/controller_tests/test_departments.py::test_create_child_department PASSED
+tests/controller_tests/test_departments.py::test_read_department PASSED
+tests/controller_tests/test_departments.py::test_read_nonexistent_department PASSED
+tests/controller_tests/test_departments.py::test_list_departments PASSED
+tests/controller_tests/test_departments.py::test_delete_department PASSED
+tests/controller_tests/test_departments.py::test_read_deleted_department PASSED
+tests/controller_tests/test_departments.py::test_delete_nonexistent_department PASSED
+tests/controller_tests/test_employee_functions.py::test_create_employee FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_employee_functions.py::test_create_department PASSED
+tests/controller_tests/test_employee_functions.py::test_create_role PASSED
+tests/controller_tests/test_employee_functions.py::test_create_employee_function PASSED
+tests/controller_tests/test_employee_functions.py::test_create_duplicate_employee_function PASSED
+tests/controller_tests/test_employee_functions.py::test_read_employee_function PASSED
+tests/controller_tests/test_employee_functions.py::test_read_nonexistent_employee_function PASSED
+tests/controller_tests/test_employee_functions.py::test_get_employee_functions PASSED
+tests/controller_tests/test_employee_functions.py::test_update_employee_function PASSED
+tests/controller_tests/test_employee_functions.py::test_update_nonexistent_employee_function PASSED
+tests/controller_tests/test_employee_functions.py::test_delete_employee_function PASSED
+tests/controller_tests/test_employee_functions.py::test_delete_nonexistent_employee_function PASSED
+tests/controller_tests/test_employees.py::test_create_employee FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_employees.py::test_create_duplicate_employee PASSED
+tests/controller_tests/test_employees.py::test_get_employees PASSED
+tests/controller_tests/test_employees.py::test_get_nonexistent_employee PASSED
+tests/controller_tests/test_employees.py::test_delete_employee PASSED
+tests/controller_tests/test_employees.py::test_delete_nonexistent_employee PASSED
+tests/controller_tests/test_insights.py::test_generate_insight FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_media.py::test_get_upload_url FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_opa.py::test_get_upload_url PASSED
+tests/controller_tests/test_roles.py::test_create_role FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_roles.py::test_create_child_role FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_roles.py::test_read_role PASSED
+tests/controller_tests/test_roles.py::test_read_all_roles PASSED
+tests/controller_tests/test_roles.py::test_update_role PASSED
+tests/controller_tests/test_roles.py::test_delete_role PASSED
+tests/controller_tests/test_roles.py::test_read_deleted_role PASSED
+tests/controller_tests/test_roles.py::test_read_nonexistent_role PASSED
+tests/controller_tests/test_roles.py::test_update_nonexistent_role PASSED
+tests/controller_tests/test_roles.py::test_delete_nonexistent_role PASSED
+tests/controller_tests/test_touchpoints.py::test_create_touchpoint FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_touchpoints.py::test_read_touchpoint PASSED
+tests/controller_tests/test_touchpoints.py::test_read_all PASSED
+tests/controller_tests/test_touchpoints.py::test_update PASSED
+tests/controller_tests/test_touchpoints.py::test_create_touchpoint_cluster PASSED
+tests/controller_tests/test_touchpoints.py::test_delete_touchpoint_cluster PASSED
+tests/controller_tests/test_touchpoints.py::test_create_touchpoint_role PASSED
+tests/controller_tests/test_touchpoints.py::test_update_touchpoint_role PASSED
+tests/controller_tests/test_touchpoints.py::test_delete_touchpoint_role PASSED
+tests/controller_tests/test_touchpoints.py::test_delete_nonexistent_touchpoint_role PASSED
+tests/controller_tests/test_touchpoints.py::test_delete_touchpoint_with_cascades PASSED
+tests/controller_tests/test_touchpoints.py::test_delete_nonexistent_touchpoint PASSED
+tests/controller_tests/test_user_experiences.py::test_check_in FIXME: DO SOME SCOPE STUFF
+PASSED
+tests/controller_tests/test_user_experiences.py::test_experience_diagram PASSED
+tests/controller_tests/test_user_experiences.py::test_disallow_second_check_in_while_not_checked_out PASSED
+tests/controller_tests/test_user_experiences.py::test_check_in_user_unknown_error PASSED
+tests/controller_tests/test_user_experiences.py::test_check_in_business_unknown_error PASSED
+tests/controller_tests/test_user_experiences.py::test_get_experience PASSED
+tests/controller_tests/test_user_experiences.py::test_get_experiences PASSED
+tests/controller_tests/test_user_experiences.py::test_assign_experience PASSED
+tests/controller_tests/test_user_experiences.py::test_invalid_state_transition PASSED
+tests/controller_tests/test_user_experiences.py::test_accept_assigment PASSED
+tests/controller_tests/test_user_experiences.py::test_reassign_experience PASSED
+tests/controller_tests/test_user_experiences.py::test_decline_assignment PASSED
+tests/controller_tests/test_user_experiences.py::test_unassign PASSED
+tests/controller_tests/test_user_experiences.py::test_check_out PASSED
+tests/controller_tests/test_user_experiences.py::test_allow_second_check_in_after_checkout PASSED
+tests/controller_tests/test_users.py::test_create_user PASSED
+tests/controller_tests/test_users.py::test_create_duplicate_user PASSED
+tests/controller_tests/test_users.py::test_search_user_by_email PASSED
+tests/controller_tests/test_users.py::test_search_user_by_nonexistent_email PASSED
+tests/controller_tests/test_users.py::test_read_user PASSED
+tests/controller_tests/test_users.py::test_read_nonexistent_user PASSED
+tests/controller_tests/test_users.py::test_delete_nonexistent_user PASSED
+tests/controller_tests/test_users.py::test_delete_user PASSED
+
+=================================== FAILURES ===================================
+_____ PreferenceGraphTestCase.test_add_preference_tree_for_user_expansion ______
+
+self = <tests.test_graph.PreferenceGraphTestCase testMethod=test_add_preference_tree_for_user_expansion>
+
+    def test_add_preference_tree_for_user_expansion(self):
+        self.test_add_preference()
+        with PreferenceGraph(NEO4J_URI, NEO4J_USER, NEO4J_PASS) as g:
+            tree = g.get_preference_tree_for_user(USER)
+            tree["children"][0]["children"].append(
+                dict(name="fruit", children=[dict(name="apple", children=[])])
+            )
+            # the next call modifies `tree` and assigns IDs to the new children
+            # thus `updated_tree` and `tree` will be equal
+            g.add_preference_tree_to_user(tree, USER)
+            updated_tree = g.get_preference_tree_for_user(USER)
+>           self.assertEqual(tree, updated_tree)
+E           AssertionError: {'nam[117 chars]e': 'Chicken', 'id': '45240aa8-ea47-41df-baf9-[189 chars]}]}]} != {'nam[117 chars]e': 'fruit', 'id': '7e9de6b6-f034-471b-b675-da[189 chars]}]}]}
+E           - {'children': [{'children': [{'children': [],
+E           + {'children': [{'children': [{'children': [{'children': [],
+E           ?                                          ++++++++++++++
+E           
+E           -                              'id': '45240aa8-ea47-41df-baf9-0c80c9b60837',
+E           -                              'name': 'Chicken'},
+E           -                             {'children': [{'children': [],
+E                                                        'id': 'fde4db72-bb8f-4e34-b7fc-667844bf8bac',
+E                                                        'name': 'apple'}],
+E                                          'id': '7e9de6b6-f034-471b-b675-da538884a503',
+E           -                              'name': 'fruit'}],
+E           ?                                              -
+E           
+E           +                              'name': 'fruit'},
+E           +                             {'children': [],
+E           +                              'id': '45240aa8-ea47-41df-baf9-0c80c9b60837',
+E           +                              'name': 'Chicken'}],
+E                            'id': 'dc0da8a2-cc9f-4627-9c31-0dbc3dac7d91',
+E                            'name': 'Food'}],
+E              'id': '0',
+E              'name': 'root'}
+
+tests/test_graph.py:85: AssertionError
+=============================== warnings summary ===============================
+tests/controller_tests/test_auth.py::test_create_user_success
+  /Users/rutujasurve/Documents/root_btlr/new-btlr-fastapi/btlr-fastapi/.venv/lib/python3.9/site-packages/zep_python/__init__.py:35: DeprecationWarning: Importing memory classes from the base client path is deprecated, please import from zep_python.memory instead.
+    ) = deprecated_import()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_graph.py::PreferenceGraphTestCase::test_add_preference_tree_for_user_expansion
+======== 1 failed, 95 passed, 1 skipped, 1 warning in 151.61s (0:02:31) ========

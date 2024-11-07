@@ -35,5 +35,9 @@ class Settings(BaseSettings):
     OTP_EMAIL_FROM_ADDRESS: str
     OTP_EXPIRY_IN_MINUTES: int
 
+     # Qdrant
+    QDRANT_URL: str
+    QDRANT_URL_API_KEY: str
+
 
 settings = Settings()
