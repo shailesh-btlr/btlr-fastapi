@@ -18,6 +18,7 @@ from app.routers import (
     touchpoints,
     user_experiences,
     users,
+    prediction,
 )
 from app.services.exceptions import NotFoundException, UserExperienceException
 
@@ -124,6 +125,10 @@ authenticated_routes.include_router(
 
 authenticated_routes.include_router(
     insights.router, prefix="/insights", tags=["Insights"]
+)
+
+unauthenticated_routes.include_router(
+    prediction.router, prefix="/api/v1/prediction", tags=["Prediction"]
 )
 
 
