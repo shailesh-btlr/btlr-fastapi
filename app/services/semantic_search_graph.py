@@ -45,10 +45,10 @@ def semantic_search(term):
     
 
 
-print("--Semantic Search--")
-# semantic_search("food pizza")
-print(semantic_search("fashion dresses"))
-print(semantic_search("burger"))
+# print("--Semantic Search--")
+# # semantic_search("food pizza")
+# print(semantic_search("fashion dresses"))
+# print(semantic_search("burger"))
 
 # Result:
 # Score ID Name
@@ -84,11 +84,11 @@ def semantic_search_for_user(term, user):
  
 
 
-print("--Semantic Search For User--")
+# print("--Semantic Search For User--")
 
-print(semantic_search_for_user("dubai travel", "alyne"))
-print(semantic_search_for_user("yoga", "raj"))
-print(semantic_search_for_user("mountain", "rutuja"))
+# print(semantic_search_for_user("dubai travel", "alyne"))
+# print(semantic_search_for_user("yoga", "raj"))
+# print(semantic_search_for_user("mountain", "rutuja"))
 
 # print("For user alyne:")
 # print(query1)

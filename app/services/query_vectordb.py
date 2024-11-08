@@ -2,10 +2,13 @@ import getpass
 import os
 from langchain_openai import OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
-from qdrant_client import QdrantClient
 from uuid import uuid4
 from langchain_core.documents import Document
 from app.config import settings
+from typing import List
+from qdrant_client.http.models import PointStruct
+
+
 
 
 os.environ["OPENAI_API_KEY"] = settings.OPENAI_KEY
@@ -32,3 +35,11 @@ def vectordb_search(query,k):
       for res in results
       ]
    return results_list
+
+
+
+
+def add_documents_to_qdrant(documents: List[Document]):
+  uuids = [str(uuid4()) for _ in range(len(documents))]
+  qdrant.add_documents(documents=documents, ids=uuids)
+  return {"status": "success", "message": "Documents added successfully","uuids": uuids}

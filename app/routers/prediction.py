@@ -2,11 +2,15 @@ from fastapi import APIRouter, HTTPException
 from typing import Optional
 from app.services.query_extract_preferences import extract_preferences
 from app.services.semantic_search_graph import semantic_search, semantic_search_for_user
-from app.services.query_vectordb import vectordb_search 
+from app.services.query_vectordb import vectordb_search,add_documents_to_qdrant
+from pydantic import BaseModel
+from typing import List
+from langchain.schema import Document
+
 
 router = APIRouter()
 
-@router.post("/query_extract_preferences")
+@router.post("/query-extract-preferences")
 async def query_extract_preferences(input_str: str) -> dict:
   """
   Extract preferences from the provided string.
@@ -29,7 +33,7 @@ async def query_extract_preferences(input_str: str) -> dict:
 
 
 
-@router.post("/query_semantic_search")
+@router.post("/graph-semantic-search")
 async def search(term: str, user: Optional[str] = None):
     """
     Semantic search endpoint that supports both general search and user-specific search.
@@ -62,7 +66,7 @@ async def search(term: str, user: Optional[str] = None):
     except Exception as e:
       raise HTTPException(status_code=400, detail=str(e))
     
-@router.post("/query-vectordb")
+@router.post("/query-vectordb-qa")
 
 async def search(query: str, k: Optional[int] = None):  
     """
@@ -83,3 +87,23 @@ async def search(query: str, k: Optional[int] = None):
        return vectordb_search_result
     except Exception as e:
       raise HTTPException(status_code=400, detail=str(e))
+    
+
+
+class DocumentData(BaseModel):
+  page_content: str
+  metadata: dict
+
+class AddDocumentsRequest(BaseModel):
+  documents: List[DocumentData]
+
+@router.post("/add-documents-vectordb/")
+async def add_documents(request: AddDocumentsRequest):
+  try:
+      documents = [Document(page_content=doc.page_content, metadata=doc.metadata) for doc in request.documents]
+      result = add_documents_to_qdrant(
+          documents=documents
+      )
+      return result
+  except Exception as e:
+      raise HTTPException(status_code=500, detail=str(e))    
